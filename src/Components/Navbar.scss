@@ -1,0 +1,100 @@
+.navbar {
+  width: 100%;
+  color: white;
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+
+  &.scrolled {
+    background-color: rgba(9, 7, 7, 0.647) !important;
+    transition: all 0.3s ease-out 0s !important;
+    box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
+    backdrop-filter: blur(15px) !important;
+  }
+
+  .container {
+    padding: 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    @media (max-width: 860px) {
+      letter-spacing: normal;
+      padding: 0px 20px;
+      align-items: center;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 50px;
+        margin-right: 40px;
+
+        @media (max-width: 480px) {
+          display: none;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        margin-right: 10px;
+        margin-left: 10px;
+        cursor: pointer;
+        color: white;
+        font-size: 17px;
+        fill: white !important
+
+        
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+
+      .icon {
+        margin: 0px 15px;
+        cursor: pointer;
+        color: white;
+      }
+
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+
+      .username {
+        margin-left: 5px;
+      }
+      .profile {
+        .options {
+          display: none;
+          //background-color: white;
+          border-radius: 5px;
+        }
+        span {
+          padding: 10px;
+          margin-right: 10px;
+          cursor: pointer;
+          @media (max-width: 480px) {
+            display: none;
+          }
+        }
+
+        &:hover {
+          .options {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+}
