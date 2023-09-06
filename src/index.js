@@ -8,7 +8,7 @@ import { HelmetProvider } from "react-helmet-async";
 import axios from "axios";
 import { MainProvider } from "./Context/Main";
 
-axios.defaults.baseURL = "http://localhost:5000/api";
+axios.defaults.baseURL = "https://netflix-streaming-platform-backend-30sk2st8o-roishamir1.vercel.app/api";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
